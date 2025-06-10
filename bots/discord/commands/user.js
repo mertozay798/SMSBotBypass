@@ -42,7 +42,13 @@ module.exports = function(m) {
      * Vérifier si l'utilisateur est bien sur le serveur
      */
     const member = m.message.guild.member(user);
-    if (!member) return embed(m.message, 'Not possible', 15158332, '@' + username + ' is not on your server. Or wasn\'t found.', m.user);
+    if (!member) return embed(
+        m.message,
+        'Not possible',
+        15158332,
+        '@' + user.username + " is not on your server. Or wasn't found.",
+        m.user
+    );
 
     /**
      * Création des constantes, informations sur l'utilisateur à mettre admin
